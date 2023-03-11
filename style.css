@@ -4,8 +4,25 @@
     margin: 0px;
 
 }
+/* to make website responsive */
 
 
+html{
+    /* font-size: 10px; */
+    /* font size------100%=16px  (by default)
+    16px =100%
+    1px=(100/16)%=6.25%
+    10px=62.5% */
+
+    /* 10px =1rem */
+
+    /* it is best practice to use relative unit instead of px */
+font-size: 62.5%;
+}
+
+.main_container{
+    overflow-x: hidden;
+}
 
 .nav{
  display: flex;
@@ -13,31 +30,31 @@ justify-content: space-between;
     background-color: rgb(231, 225, 225);
     position: fixed;
     width: 100vw;
-    border-bottom: 2px solid gainsboro;
+    border-bottom: .2rem solid gainsboro;
     /* to make navbar fixed at the top */
     z-index: 50;
   
 }
 .nav_image img{
-    height: 67px;
-    width: 212px;
+    height: 6.7rem;
+    width: 21.2rem;
 }
 .icon1 img{
    
-    height: 67px;
-    width: 65px;
+    height: 6.7rem;
+    width: 6.5rem;
 }
 .header{
     display: flex;
     position: relative;
-    top: 190px;
+    top: 19rem;
   
 
 }
 .header_info{
     position: relative;
-    left: 20vw;
-    top: 50px;
+    left: 20rem;
+    top: 10rem;
 }
 /* .header_image img{
     position: relative;
@@ -46,7 +63,7 @@ justify-content: space-between;
 .header_info p#green{
     background-color: green;
     color: white;
-    padding: 8px;
+    padding: .8rem;
     width: 16vw;
 }
 .large{
@@ -55,9 +72,9 @@ justify-content: space-between;
 }
 .header_info #orange{
     background-color: rgb(234, 163, 11);
-    padding: 10px;
+    padding: 1rem;
     width: 8vw;
-    margin-top: 20px;
+    margin-top: 2rem;
 
 
 }
@@ -65,24 +82,24 @@ justify-content: space-between;
     display: flex;
     margin-top: 34vh;
     justify-content: space-between;
-    border-bottom: 2px solid gainsboro;
-    padding-bottom: 25px;
+    border-bottom: .2rem solid gainsboro;
+    padding-bottom: 2.5rem;
 }
 .header_foot .list{
     display: flex;
     
 }
 .list span{
-    padding-left: 20px;
+    padding-left: 2rem;
 }
 .grid{
     display: grid;
     grid-template-rows: 20vh 20vh 20vh;
     grid-template-columns: 20vw 20vw 20vw 20vw;
-    gap: 7px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-left: 70px;
+    gap: .7rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    margin-left: 7rem;
     
    
 }
@@ -156,36 +173,101 @@ justify-content: space-between;
 }
 .menu_bar h3{
     background-color: green;
-    padding: 10px;
+    padding: 1rem;
     width: 8vw;
     margin-left: 40vw;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 .menu_bar h2{
     margin-left: 39vw;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 .footer{
     display: flex;
     justify-content: space-evenly;
  
     background-color: rgb(238, 210, 106);
-    padding: 20px;
+    padding: 2rem;
 }
 .list:hover,.header_info p:hover{
     transition: ease-in-out;
-    border-bottom: 2px solid gainsboro;
+    border-bottom: .2rem solid gainsboro;
     transform: scale(1.03);
 }
 .foot1 img{
     width: 14vw;
-    margin-right: 1px;
+    margin-right: .1rem;
 }
 .container{
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
 .foot1 input{
-    padding: 4px;
+    padding: .4rem;
+}
+
+@media(max-width:998px){
+    html{
+        font-size: 58%;
+
+    }
+    .header_info{
+        position: relative;
+        left: 5rem;
+        top: 5rem;
+    }
+    .grid{
+        margin-left: 1.3rem;
+    }
+    .header_image img{
+        height: 55.5rem;
+        width: 57.4rem;
+    
+
+       
+    }
+}
+@media(max-width:440px){
+    html{
+        font-size: 45%;
+    }
+    .header_image img{
+        height: 23.5rem;
+        width: 21.4rem;
+       
+    }
+    .header_info{
+        position: relative;
+        left: 5rem;
+        top: 3rem;
+    }
+    .grid{
+        display: grid;
+       margin-left: 0.2rem;
+     }
+
+
+}
+@media(min-width:440px) and (max-width:580px){
+    html{
+        font-size: 58%;
+
+    }
+    .header_info{
+        position: relative;
+        left: 5rem;
+        top: 5rem;
+    }
+    .grid{
+        margin-left: 1.3rem;
+    }
+    .header_image img{
+        height: 30.5rem;
+    width: 27.4rem;
+    
+
+       
+    }
+
 }
